@@ -20,8 +20,8 @@ RUN unzip /tmp/pb.zip -d /pb/
 # COPY ./pb_public /cloud/storage/pb_public
 
 ENV HOST 0.0.0.0
-ENV PORT 8080
+ENV PORT 8081
 
 # start PocketBase
-EXPOSE 8080
-CMD ["/pb/server", "serve", "--http=0.0.0.0:8080", "--dir=/cloud/storage/pb_data", "--publicDir=/cloud/storage/pb_public", "--hooksDir=/cloud/storage/pb_hooks"]
+EXPOSE 8081
+CMD ["/pb/server", "serve", "--http=0.0.0.0:8081", "--dir=/cloud/storage/pb_data", "--publicDir=/cloud/storage/pb_public", "--hooksDir=/cloud/storage/pb_hooks"]
